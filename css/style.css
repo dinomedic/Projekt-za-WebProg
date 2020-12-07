@@ -1,0 +1,21 @@
+.jumbotron{
+    
+    background:transparent url('../img/backgroundheader.jpg') no-repeat bottom center /cover
+    
+
+}
+.naslov{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+.form-register{
+    text-align: center;
+}
+.form-login{
+    text-align: center;
+}
