@@ -10,7 +10,7 @@
 <?php include ('navbar.php');?>
 <?php
 include_once "connect.php";
-session_start();
+
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
     echo "not logged in";
 }else{
