@@ -23,7 +23,11 @@
         
 
           <button type="submit" class="btn btn-primary">Login</button>
+          
+          <p>Don't have an account?<a class="nav-link" href="Register.php">Register</a></p>
+          
     </form>
+
 
 
 
@@ -48,24 +52,30 @@
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
       
-      $sql = "SELECT id FROM users WHERE username = '$myusername' and password = '$mypassword'";
+      
+      $sql = "SELECT id,role FROM users WHERE username = '$myusername' and password = '$mypassword'";
+      
       $result = mysqli_query($db,$sql);
+      
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
-      
+      $myid=$row['id'];
+      $myrole=$row['role'];
       $count = $result->num_rows;
       
+
 		
       if($count == 1) {
          $_SESSION['loggedin'] = true;
          $_SESSION['login_user'] = $myusername;
+         $_SESSION['login_role']=$myrole;
+         $_SESSION['login_id']=$myid;
         
          
-         header("location: listings.php");
+         header("location: Frontpage.php");
       }
 	  else {
       $_SESSION['loggedin']=false;
-         echo  "Wrong password or username or user doesn't exist!";
+         echo  "Wrong password or user doesn't exist!";
       }
    }
 ?>

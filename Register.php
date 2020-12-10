@@ -13,6 +13,17 @@
     <?php include ('navbar.php'); ?>
 
     <form class="form-register" action="" method="post">
+
+    <div class="form-group">
+        <label for="Fname">First name: </label><br>
+        <input type="text" name="Fname" id="Fname" placeholder="Enter your first name" required="required">
+      </div>
+
+      <div class="form-group">
+        <label for="Lname">Last name: </label><br>
+        <input type="text" name="Lname" id="Lname" placeholder="Enter your last name" required="required">
+      </div>
+
       <div class="form-group">
         <label for="username">Username: </label><br>
         <input type="text" name="username" id="username" placeholder="Enter your username" required="required">
@@ -56,10 +67,10 @@ if(isset($_POST["username"])){
 	
 	if($result->num_rows == 0) {
 		
-		$sql = mysqli_query($db,"INSERT INTO users (username,email,password,role)
-		VALUES ('".$_POST["username"]."','".$_POST["email"]."','".$_POST["password"]."','user')"); 
+		$sql = mysqli_query($db,"INSERT INTO users (Fname,Lname,username,email,password,role)
+		VALUES ('".$_POST["Fname"]."','".$_POST["Lname"]."','".$_POST["username"]."','".$_POST["email"]."','".$_POST["password"]."','user')"); 
 				
-		$sql = header("Location: Listings.php");
+		$sql = header("Location: Login.php");
 	} 
 	else {
 		echo "Username already exists!";

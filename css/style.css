@@ -4,18 +4,37 @@
     
 
 }
+
 .naslov{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-
-
-
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  img {
+    display: block;
+    max-width: 500px;
+    max-height: 300px;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
 .form-register{
     text-align: center;
 }
 .form-login{
     text-align: center;
 }
+
