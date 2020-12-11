@@ -23,12 +23,12 @@ $result = $db->query($sql);
   <div class="col-sm ">
 <p class="text-center"> Pet adoption is a critical part of our mission. Each year, 6.5 million pets enter animal shelters in the United States. Tragically, only half of them are adopted. 
 
-At Seattle Humane, homeless pets stay with us until they are adopted — no matter how long it takes. We believe every animal deserves a chance for a good home. 
+At Seattle Paws, homeless pets stay with us until they are adopted — no matter how long it takes. We believe every animal deserves a chance for a good home. 
 
 There are many reasons pets come to our shelter.  Some animals are transferred from other shelters, and some pets are surrendered for medical or behavioral concerns, 
 or due to financial hardship. No matter the situation, we prepare adopters for success by 
 helping you choose a pet that is right for your home environment and providing education and care that will get your relationship off to a good start. <br><br>
-<a href="CreateAdopt.php">Create adoption listing</a><br><br></p>
+<a href="Adoptform.php">Create adoption listing</a><br><br></p>
 
 </div>
 <div class="col-sm-4 ">
