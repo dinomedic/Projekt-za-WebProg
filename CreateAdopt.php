@@ -27,6 +27,4 @@ if(isset($_POST["A_name"])||isset($_POST["species"])){
 				
         
 }  }
-
-
 ?>

@@ -3,7 +3,7 @@ include_once "connect.php";
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
 echo '
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -34,7 +34,7 @@ echo '
 </nav><br><br>';}
 elseif($_SESSION['login_role']=='admin'){
   echo '
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -72,7 +72,7 @@ elseif($_SESSION['login_role']=='admin'){
 
 else{
   echo '
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -100,6 +100,4 @@ else{
     </ul>
 </nav><br><br>';
 }
-
-
 ?>

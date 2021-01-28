@@ -4,4 +4,4 @@ function clicked() {
     } else {
         return false;
     }
- }
+}
