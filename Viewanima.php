@@ -54,7 +54,8 @@
         <div class="col-sm-4 ">
           <p>If you wish to adopt this animal or want to learn more contact it's current foster. </p>
           <?php if (isset($_SESSION['login_role']) && $_SESSION['login_role'] == 'admin' || isset($_SESSION['login_role']) && $_SESSION['login_id'] == $row['creator_id']) {
-            echo "<a href='deleteanima.php?id=" . $row['id'] . "'>Delete</a>";
+            
+            echo "<a class='btn btn-primary' href='deleteanima.php?id=" . $row['id'] . "'role='button'>Delete listing</a>";
           } ?>
         </div>
 

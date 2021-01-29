@@ -41,7 +41,11 @@
             <?php echo $row["email"]; ?></p><br>
           <p>Role: <br>
             <?php echo $row["role"]; ?></p><br>
-          <p>Animal listings: <br>
+          
+
+        </div>
+        <div class="col-sm-4 ">
+        <p>Animal listings: <br>
           <?php
           if ($result2->num_rows > 0) {
             while ($row2 = $result2->fetch_assoc()) { ?>
@@ -58,14 +62,10 @@
           }
 
           ?>
-
         </div>
         <div class="col-sm-4 ">
-
-        </div>
-        <div class="col-sm-4 ">
-
-          <?php echo "<a href='usermodif.php?id=" . $row["id"] . "'>Delete</a>"; ?><br>
+          <p>User controls:</p>
+          <?php echo "<a class='btn btn-primary' href='usermodif.php?id=" . $row["id"] . "' role='button'>Delete</a>"; ?><br>
 
 
 

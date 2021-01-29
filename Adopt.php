@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
   <header>
     <?php include('header.php'); ?>
     <?php include('navbar.php'); ?>
@@ -30,8 +31,8 @@
             There are many reasons pets come to our shelter.  Some animals are transferred from other shelters, and some pets are surrendered for medical or behavioral concerns,
             or due to financial hardship. No matter the situation, we prepare adopters for success by
             helping you choose a pet that is right for your home environment and providing education and care that will get your relationship off to a good start. <br><br>
-            <p class="text-center"><a class="btn btn-primary" href="Adoptform.php" role="button">Create adoption listing</a></p>
-            
+          <p class="text-center"><a class="btn btn-primary" href="Adoptform.php" role="button">Create adoption listing</a></p>
+
           </p>
 
         </div>
@@ -39,10 +40,10 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-
-    </div>
-    <div class="col-sm ">
+    <div class="container">
+    <div class="row">
+    
+    <div class="col-md">
       <table class="table">
         <thead>
           <tr>
@@ -70,6 +71,8 @@
 
           ?>
     </div>
+    </div>
+    
 
     </div>
     </div>

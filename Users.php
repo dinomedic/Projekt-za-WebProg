@@ -22,6 +22,7 @@
     <div class="container-fluid">
 
     </div>
+    <div class="container">
     <div class="col-sm ">
       <table class="table">
         <thead>
@@ -49,7 +50,7 @@
 
           ?>
     </div>
-
+    </div>
     </div>
     </div>
   </main>

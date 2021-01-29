@@ -17,6 +17,7 @@
     $sql = "SELECT id,Fname,Lname,email,dob,work FROM volunteerapplication";
     $result = $db->query($sql);
     ?>
+    <div class="container">
     <table class="table">
       <thead>
         <tr>
@@ -46,7 +47,7 @@
           echo "0 rezultata";
         }
         ?>
-
+</div>
   </main>
 
   <?php include('footer.php'); ?>
