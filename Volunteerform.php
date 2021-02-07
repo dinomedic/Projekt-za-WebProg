@@ -75,13 +75,16 @@ if (isset($_POST["email"])) {
   $sql = "";
 
   $result = mysqli_query($db, "SELECT * FROM volunteerapplication WHERE email = '" . $_POST["email"] . "'");
-
+  $Fname = mysqli_real_escape_string($db,$_POST["Fname"]);
+  $Lname = mysqli_real_escape_string($db,$_POST["Lname"]); 
+  $email = mysqli_real_escape_string($db,$_POST["email"]);
+  
   if ($result->num_rows == 0) {
 
 
 
     $sql = mysqli_query($db, "INSERT INTO volunteerapplication (Fname,Lname,email,dob,work)
-        VALUES ('" . $_POST["Fname"] . "','" . $_POST["Lname"] . "','" . $_POST["email"] . "','" . $_POST["dob"] . "','" . $_POST["work"] . "')");
+        VALUES ('" . $Fname . "','" . $Lname . "','" . $email . "','" . $_POST["dob"] . "','" . $_POST["work"] . "')");
     echo "<p align='center'>Application sent!</p>";
   } else {
     echo "<p align='center'>You already submitted an application!</p>";

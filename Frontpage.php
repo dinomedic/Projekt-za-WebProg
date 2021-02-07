@@ -37,7 +37,7 @@
           <div class="col-lg-4">
             <img class="rounded-circle" src="img/cat2_frontpage.jpg"  width="350" height="250">
             
-            <p>We are also looking for volunteers to join and help us take care of animals and other needs of our ogranization!</p>
+            <p>We are also looking for volunteers to join and help us take care of animals and other needs of our organization!</p>
             <p><a class="btn btn-secondary" href="Volunteer.php" role="button">Fill out a form to volunteer! &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->

@@ -68,11 +68,16 @@ if (isset($_POST["username"])) {
   require_once "connect.php";
   $sql = "";
   $result = mysqli_query($db, "SELECT * FROM users WHERE username = '" . $_POST["username"] . "'");
+  $Fname = mysqli_real_escape_string($db,$_POST["Fname"]);
+  $Lname = mysqli_real_escape_string($db,$_POST["Lname"]); 
+  $username = mysqli_real_escape_string($db,$_POST["username"]);
+  $email = mysqli_real_escape_string($db,$_POST["email"]);
+  $psw = mysqli_real_escape_string($db,$_POST["password"]);
 
   if ($result->num_rows == 0) {
 
     $sql = mysqli_query($db, "INSERT INTO users (Fname,Lname,username,email,password,role)
-		VALUES ('" . $_POST["Fname"] . "','" . $_POST["Lname"] . "','" . $_POST["username"] . "','" . $_POST["email"] . "','" . $_POST["password"] . "','user')");
+		VALUES ('" . $Fname . "','" . $Lname . "','" . $username . "','" . $email . "','" . $psw . "','user')");
 
     $sql = header("Location: Login.php");
   } else {

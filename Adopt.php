@@ -4,6 +4,7 @@
 <head>
   <title>Adopt</title>
   <?php include('head.php'); ?>
+  <script src="scripts/Adopt.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,19 @@
             There are many reasons pets come to our shelter.  Some animals are transferred from other shelters, and some pets are surrendered for medical or behavioral concerns,
             or due to financial hardship. No matter the situation, we prepare adopters for success by
             helping you choose a pet that is right for your home environment and providing education and care that will get your relationship off to a good start. <br><br>
-          <p class="text-center"><a class="btn btn-primary" href="Adoptform.php" role="button">Create adoption listing</a></p>
+            
+            <?php
+            require_once "connect.php";
+            if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
+              echo'<p class="text-center"><a class="btn btn-primary"  role="button" onclick="clicked()">Create adoption listing</a></p>';
+              
+
+            } else{
+              echo '<p class="text-center"><a class="btn btn-primary" href="Adoptform.php" role="button">Create adoption listing</a></p>';
+              
+            }
+           ?>
+           
 
           </p>
 
